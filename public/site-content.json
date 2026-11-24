@@ -1,0 +1,102 @@
+{
+  "tagline": "Custom mobile spray tans",
+  "serviceArea": "Spokane + nearby",
+  "quote": "Nice to meet you, I’m Meesh, and our journey has only just begun…",
+  "accolade": "Named the #1 Best Mobile Sunless Technician in the United States",
+  "story": [
+    {
+      "text": "What began as a love for that effortless, sun-kissed glow became something much more personal."
+    },
+    {
+      "text": "After experiencing the effects of sun damage and navigating my own skin-related health challenges, I began to see tanning differently. I still loved the confidence and warmth that a beautiful tan could bring—but I no longer wanted that glow to come at the expense of my skin."
+    },
+    {
+      "text": "So, I turned that experience into a passion.",
+      "pull": true
+    },
+    {
+      "text": "I became deeply committed to finding a better way to achieve the glow we love while protecting the skin we have. That journey inspired me to create House Call Bronze—a personalized approach to tanning designed around you, your skin, and your life."
+    },
+    {
+      "text": "I founded House Call Bronze around one simple belief:"
+    },
+    {
+      "text": "Your tan should fit your life, not the other way around.",
+      "pull": true
+    },
+    {
+      "text": "Every tan is thoughtfully customized and mixed for your skin tone, your desired glow, and the look you want to feel your absolute best in. No UV. No unnecessary sun exposure. Just a beautiful, sun-kissed glow."
+    },
+    {
+      "text": "And because I believe luxury should feel effortless, your tan is finished wherever you feel most comfortable."
+    }
+  ],
+  "services": [
+    {
+      "id": "come-to-meesh",
+      "name": "Come to Meesh",
+      "priceLabel": "$60",
+      "description": "Custom full-body tan."
+    },
+    {
+      "id": "house-call",
+      "name": "House Call",
+      "priceLabel": "$90+",
+      "description": "Same custom tan at your home or hotel."
+    },
+    {
+      "id": "mobile-party",
+      "name": "Mobile party",
+      "priceLabel": "$60/person",
+      "description": "3+ people, already on site."
+    }
+  ],
+  "theme": {
+    "colors": {
+      "ivory": "#FBF7F1",
+      "cream": "#F4ECE1",
+      "blush": "#EBCFC6",
+      "petal": "#F5E1DC",
+      "espresso": "#2A1D17",
+      "bronze": "#7A4E33",
+      "gold": "#A8864F"
+    },
+    "fontPair": "cormorant-jost",
+    "motion": {
+      "reveal": true,
+      "smoothScroll": true
+    }
+  },
+  "blocks": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "visible": true
+    },
+    {
+      "id": "about",
+      "type": "about",
+      "visible": true
+    },
+    {
+      "id": "services",
+      "type": "services",
+      "visible": true
+    },
+    {
+      "id": "treatments",
+      "type": "treatments",
+      "visible": true
+    },
+    {
+      "id": "retail",
+      "type": "retail",
+      "visible": true
+    },
+    {
+      "id": "community",
+      "type": "community",
+      "visible": true
+    }
+  ]
+}
