@@ -5,12 +5,15 @@ import { useEffect, useState } from 'react';
 // ({ type: 'ttp-embed-height', height }) from the tabtopro.com
 // origin; the iframe is resized to match so the full booking
 // window is always visible without inner scrolling.
+// ?theme=bronze renders the embed in the House Call Bronze look
+// (ivory/cream, espresso, bronze + gold, Cormorant Garamond / Jost).
 const EMBED_URL =
-  'https://tabtopro.com/embed/book/house-call-bronze-custom-mobile-spray-tans-by-meesh-in-spokane-spokane-wa';
+  'https://tabtopro.com/embed/book/house-call-bronze-custom-mobile-spray-tans-by-meesh-in-spokane-spokane-wa?theme=bronze';
 const EMBED_ORIGIN = 'https://tabtopro.com';
 
 export default function TabToProEmbed() {
   const [height, setHeight] = useState(720);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const onMessage = (e: MessageEvent) => {
@@ -30,10 +33,30 @@ export default function TabToProEmbed() {
   }, []);
 
   return (
-    <iframe
-      src={EMBED_URL}
-      title="Book an appointment with House Call Bronze"
-      style={{ width: '100%', height, border: 0, display: 'block' }}
-    />
+    <div className="relative w-full" style={{ minHeight: height }}>
+      {!loaded && (
+        <div
+          className="absolute inset-0 flex items-center justify-center bg-ivory"
+          aria-hidden="true"
+        >
+          <p className="text-sm tracking-[0.2em] text-espresso/60 uppercase">
+            Loading booking…
+          </p>
+        </div>
+      )}
+      <iframe
+        src={EMBED_URL}
+        title="Book an appointment with House Call Bronze"
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: '100%',
+          height,
+          border: 0,
+          display: 'block',
+          opacity: loaded ? 1 : 0,
+          transition: 'opacity 200ms ease',
+        }}
+      />
+    </div>
   );
 }
