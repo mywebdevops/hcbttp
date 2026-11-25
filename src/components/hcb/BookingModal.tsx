@@ -239,7 +239,7 @@ export default function BookingModal(props: Props) {
           >
             <X className="h-5 w-5" strokeWidth={1.3} />
           </button>
-          <div className="flex-1 overflow-y-auto">
+          <div className="flex-1 overflow-y-auto pt-10">
             <TabToProEmbed />
           </div>
         </div>
